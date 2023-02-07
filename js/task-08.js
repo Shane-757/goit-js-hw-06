@@ -2,7 +2,8 @@
 
 let loginInfo = [];
 
-const addInfo = (event) => {
+
+const addInfo = (event) => { 
     if (document.getElementsByName('email')[0].value === "" || document.getElementsByName('password')[0].value === "") {
     alert ("all fields must be filed");
 } else{

@@ -15,12 +15,14 @@ const images = [
 
 const imageList = document.querySelector('.gallery');
 
-let newImageGallery = "";
 
-for (let i = 0; i < images.length; i++) {
-newImageGallery += `<li> <img src = ${images[i].url} alt = ${images[i].alt} width = 100px height = 100px></li>`
-};
-imageList.insertAdjacentHTML("afterbegin", newImageGallery);
+
+const markup = images.map((element) =>  `<li> <img src = ${element.url} alt = ${element.alt} width = 100px height = 100px></li>`
+).join(" ");
+
+
+
+imageList.insertAdjacentHTML("afterbegin", markup);
 
 
 
