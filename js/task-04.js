@@ -1,14 +1,21 @@
-let counterValue = 0;
 
-const button = document.querySelector('button[data-action = "increment"]');
-const button2 = document.querySelector('button[data-action = "decrement"]');
+
+const countUp = document.querySelector('button[data-action = "increment"]');
+const countDown = document.querySelector('button[data-action = "decrement"]');
 const textHolder = document.querySelector("#value");
+let counterValue = 0;
 textHolder.innerHTML = counterValue;
 
-button.addEventListener("click", function() {
-  textHolder.innerHTML = ++counterValue;
-});
+countUp.addEventListener("click", incrementCounterUp);
+ 
 
-button2.addEventListener("click", function() {
+countDown.addEventListener("click", incrementCounterDown);
+  
+
+function incrementCounterUp() {
+  textHolder.innerHTML = ++counterValue;
+}
+
+function incrementCounterDown() {
   textHolder.innerHTML = --counterValue;
-});
+}
