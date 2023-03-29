@@ -34,4 +34,3 @@ const addInfo = (event) => {
 
     document.querySelector('button').addEventListener('click', addInfo);
 
-32
